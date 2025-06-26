@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="Sales Management System " Height="450" Width="800">
+        Title="Sales Management System " Height="360" Width="600"
+        Background="#F8F9FA"
+         WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -13,7 +16,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Admin Login Card -->
-        <Border Grid.Column="0" Margin="20,102,20,102" CornerRadius="12"
+        <Border Grid.Column="0" Margin="20,45,20,67" CornerRadius="12"
                 Background="#E3F2FD" BorderBrush="#90CAF9" BorderThickness="1" Padding="16" >
             <StackPanel>
                 <TextBlock Text="Admin Login"
@@ -39,7 +42,7 @@
         </Border>
 
         <!-- Customer Login Card -->
-        <Border Grid.Column="1" Margin="20,102,20,165" CornerRadius="12"
+        <Border Grid.Column="1" Margin="20,45,20,124" CornerRadius="12"
                 Background="#F1F8E9" BorderBrush="#AED581" BorderThickness="1" Padding="16">
             <StackPanel>
                 <TextBlock Text="Customer Login"

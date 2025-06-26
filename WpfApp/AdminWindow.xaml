@@ -5,12 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="Btn_CustomerMN" Content="Manage Customers" HorizontalAlignment="Left" Height="34" Margin="81,71,0,0" VerticalAlignment="Top" Width="154" Click="Btn_CustomerMN_Click"/>
-        <Button x:Name="Btn_ProductMN" Content="Manage Products" HorizontalAlignment="Left" Height="34" Margin="81,127,0,0" VerticalAlignment="Top" Width="154" Click="Btn_ProductMN_Click"/>
-        <Button x:Name="Btn_OrderMN" Content="Create and View Orders" HorizontalAlignment="Left" Height="34" Margin="81,183,0,0" VerticalAlignment="Top" Width="154" Click="Btn_OrderMN_Click"/>
-        <Button x:Name="Btn_OrderMN1" Content="Reports" HorizontalAlignment="Left" Height="34" Margin="81,239,0,0" VerticalAlignment="Top" Width="154" Click="Btn_OrderMN1_Click"/>
+        Title="Admin Dashboard" Height="450" Width="800"
+        Background="#F8F9FA"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
 
+    <Grid>
+        <Border Margin="40" Padding="24" CornerRadius="12"
+                Background="White" BorderBrush="#E0E0E0" BorderThickness="1" >
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+                <TextBlock Text="Admin Dashboard"
+                           FontSize="20" FontWeight="Bold"
+                           Foreground="#0D47A1" TextAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <Button x:Name="Btn_CustomerMN" Content="Manage Customers"
+                        Height="36" Margin="0,6" Background="#64B5F6" Foreground="White"
+                        BorderThickness="0" FontWeight="SemiBold" Cursor="Hand"
+                        Click="Btn_CustomerMN_Click"/>
+
+                <Button x:Name="Btn_ProductMN" Content="Manage Products"
+                        Height="36" Margin="0,6" Background="#64B5F6" Foreground="White"
+                        BorderThickness="0" FontWeight="SemiBold" Cursor="Hand"
+                        Click="Btn_ProductMN_Click"/>
+
+                <Button x:Name="Btn_OrderMN" Content="Create and View Orders"
+                        Height="36" Margin="0,6" Background="#64B5F6" Foreground="White"
+                        BorderThickness="0" FontWeight="SemiBold" Cursor="Hand"
+                        Click="Btn_OrderMN_Click"/>
+
+                <Button x:Name="Btn_ReportMN" Content="Reports"
+                        Height="36" Margin="0,6" Background="#64B5F6" Foreground="White"
+                        BorderThickness="0" FontWeight="SemiBold" Cursor="Hand"
+                        Click="Btn_ReportMN_Click"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

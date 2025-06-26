@@ -42,7 +42,7 @@ namespace WpfApp
             omw.Show();
         }
 
-        private void Btn_OrderMN1_Click(object sender, RoutedEventArgs e)
+        private void Btn_ReportMN_Click(object sender, RoutedEventArgs e)
         {
             AdminReportWindow arw = new();
             arw.Show();
