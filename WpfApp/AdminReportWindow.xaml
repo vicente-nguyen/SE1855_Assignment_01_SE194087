@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfApp.AdminReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="AdminReportWindow" Height="450" Width="900">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- filters -->
+            <RowDefinition Height="*"/>
+            <!-- data grid -->
+        </Grid.RowDefinitions>
+
+        <!-- ── FILTER BAR ── -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 0 10">
+            <Label Content="From:" VerticalAlignment="Center" />
+            <DatePicker x:Name="dpStart" Width="120" Margin="5 0"/>
+            <Label Content="To:" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            <DatePicker x:Name="dpEnd"   Width="120" Margin="5 0"/>
+            <Button Content="Generate"
+                    x:Name="btnGenerate"
+                    Click="btnGenerate_Click"
+                    Margin="20 0"/>
+        </StackPanel>
+
+        <!-- ── RESULT GRID ── -->
+        <DataGrid x:Name="dgReport"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  RowHeaderWidth="0">
+                    
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Order #"
+                                    Binding="{Binding OrderID}"
+                                    Width="80"/>
+                <DataGridTextColumn Header="Date"
+                                    Binding="{Binding OrderDate, StringFormat=\{0:dd/MM/yyyy\}}"
+                                    Width="110"/>
+                <DataGridTextColumn Header="Customer"
+                                    Binding="{Binding CustomerID}"
+                                    Width="200"/>
+                <DataGridTextColumn Header="Employee"
+                                    Binding="{Binding EmployeeID}"
+                                    Width="200"/>
+                <DataGridTextColumn Header="Total ($)"
+                                    Binding="{Binding TotalAmount, StringFormat=N2}"
+                                    Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
